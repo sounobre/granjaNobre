@@ -56,11 +56,11 @@ export default function CompraScreen(): React.JSX.Element {
         render={({ field: { onChange, value } }) => (
           <View className="border border-border rounded-2xl overflow-hidden bg-card">
             <Picker
-              selectedValue={value as TipoCompra | undefined}
-              onValueChange={(val: TipoCompra | undefined) => onChange(val)}
+              selectedValue={value ?? ""}
+              onValueChange={(val: string) => onChange(val || undefined)}
               prompt="Tipo de compra"
             >
-              <Picker.Item label="Selecione..." value={undefined} />
+              <Picker.Item label="Selecione..." value="" />
               {tipos.map((t) => (
                 <Picker.Item key={t} label={t} value={t} />
               ))}
