@@ -14,6 +14,7 @@ export default function App() {
       <StatusBar barStyle="light-content" />
       <NavigationContainer>
         <Tab.Navigator
+          id={undefined}
           screenOptions={{
             headerStyle: { backgroundColor: "#0B1220" },
             headerTintColor: "#F8FAFC",
